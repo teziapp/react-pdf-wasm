@@ -11,5 +11,9 @@ react-pdf-wasm is [wasm-pdf](https://github.com/jussiniinikoski/wasm-pdf) wrappe
 - wanted more faster creation of pdf
 - want to learn about wasm and rust
 
+## limitations:
+- can't pass nested function object, not supported by [web-worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
+
 ## other explored solutions:
 - [web-worker](https://github.com/KMJ-007/react-pdf-webworker)
+
