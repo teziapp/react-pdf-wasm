@@ -1,0 +1,27 @@
+{
+  "name": "render",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "scripts": {
+    "build":"tsup",
+    "watch":"tsup --watch",
+    "clear":"rimraf ./lib",
+    "test":"echo please write test!"
+  },  
+  "tsup": {
+    "entry": ["./index.ts"],
+    "outDir": "lib",
+    "splitting": false,
+    "sourcemap": false,
+    "minify": true,
+    "clean": true
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

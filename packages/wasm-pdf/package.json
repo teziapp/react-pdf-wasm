@@ -1,0 +1,27 @@
+{
+  "name": "@react-pdf-wasm/wasm-pdf",
+  "version": "1.0.0",
+  "description": "Generate PDF files with JavaScript and WebAssembly.",
+  "author": "Jussi Niinikoski <jussi.niinikoski@perjantai.fi>",
+  "license": "(MIT OR Apache-2.0)",
+  "keywords": [
+    "webassembly",
+    "wasm",
+    "rust",
+    "pdf"
+  ],
+  "scripts": {
+    "build": "webpack --config webpack.production.js",
+    "watch": "webpack-dev-server",
+    "clear": "rimraf lib target",
+    "test": "echo write test!"
+  },
+  "devDependencies": {
+    "@wasm-tool/wasm-pack-plugin": "^1.6.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}

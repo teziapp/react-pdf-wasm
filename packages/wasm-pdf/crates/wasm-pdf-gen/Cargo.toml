@@ -1,0 +1,26 @@
+[package]
+name = "wasm-pdf-gen"
+version = "0.1.0"
+authors = ["jussiniinikoski <jussi.niinikoski@perjantai.fi>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0"
+deflate = "1.0.0"
+base64 = "0.13.0"
+lazy_static = "1.4.0"
+regex = "1.5.5"
+
+[target.'cfg(any(target_os="wasi", not(target_arch="wasm32")))'.dependencies]
+serde_json = "1.0"
+
+[dev-dependencies]
+serde_json = "1.0"
+criterion = "0.3"
+
+[[bench]]
+name = "run_bench"
+harness = false
