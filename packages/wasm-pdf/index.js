@@ -14,7 +14,20 @@ const createPDF = (jsDocument) => {
                 jsDocument.image_widths[d.path] = d.width;
                 jsDocument.image_heights[d.path] = d.height;
             });
-            pdf.run(jsDocument);
+            const create_pdf = pdf.create_pdf(jsDocument);
+
+            let pdfFileBlobURL = null;
+            const blob = new Blob([create_pdf], {
+                type: 'application/pdf'
+            });
+            if (pdfFileBlobURL !== null) {
+                URL.revokeObjectURL(pdfFileBlobURL);
+            }
+            pdfFileBlobURL = URL.createObjectURL(blob);
+            // for debugging purposes, open another window
+            window.open(pdfFileBlobURL, "_blank");
+            // window.location.href = pdfFileBlobURL;
+            console.log({pdfFileBlobURL})
         });
         //pdf.print_document(jsDocument);
     }).catch(console.error)

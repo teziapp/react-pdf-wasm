@@ -26,20 +26,6 @@
                 });
         });
 
-        let pdfFileBlobURL = null;
-        let generatePDF = (data) => {
-            const blob = new Blob([data], {
-                type: 'application/pdf'
-            });
-            if (pdfFileBlobURL !== null) {
-                URL.revokeObjectURL(pdfFileBlobURL);
-            }
-            pdfFileBlobURL = URL.createObjectURL(blob);
-            // for debugging purposes, open another window
-            window.open(pdfFileBlobURL, "_blank");
-            // window.location.href = pdfFileBlobURL;
-        }
-
         let jsonOut = (data) => {
             console.log(JSON.stringify(data));
         };
