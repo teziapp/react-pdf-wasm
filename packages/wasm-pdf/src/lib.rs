@@ -15,6 +15,26 @@ extern "C" {
     pub fn json_out(data: &JsValue);
 }
 
+// #[wasm_bindgen]
+// pub fn create_pdf(json: &JsValue) -> Result<JsValue, JsValue> {
+//     // output panics to console.error
+//     console_error_panic_hook::set_once();
+//     let js_doc = get_js_doc(&json)?;
+//     let bytes = match create(&js_doc) {
+//         Ok(b) => b,
+//         Err(s) => return Err(JsValue::from_str(s)),
+//     };
+//     let array = Uint8Array::from(bytes.as_ref());
+
+//     let blob = Blob::new_with_u8_array_sequence_and_options(
+//         &array,
+//         BlobPropertyBag::new().type_("application/pdf"),
+//     )
+//     .map_err(|e| JsValue::from_str(&e.to_string()))?;
+
+//     Ok(JsValue::from(blob))
+// }
+
 #[wasm_bindgen]
 pub fn run(json: &JsValue) -> Result<(), JsValue> {
     // output panics to console.error

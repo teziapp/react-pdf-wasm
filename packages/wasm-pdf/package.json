@@ -13,7 +13,7 @@
   "scripts": {
     "build": "webpack --config webpack.production.js",
     "watch": "webpack-dev-server",
-    "clear": "rimraf lib target",
+    "clear": "rimraf lib target dist",
     "test": "echo write test!"
   },
   "devDependencies": {
