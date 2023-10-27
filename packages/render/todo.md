@@ -1,2 +1,4 @@
 - supporting basic elements (Document,Page,View,Image, Text, Link)
 - providing blobprovider, pdf download link, pdf viewer
+- adding support for orientation in page
+- image should take link as src, currently it is only taking local images

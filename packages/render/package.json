@@ -1,17 +1,19 @@
 {
-  "name": "render",
+  "name": "@react-pdf-wasm/render",
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "scripts": {
-    "build":"tsup",
-    "watch":"tsup --watch",
-    "clear":"rimraf ./lib",
-    "test":"echo please write test!"
-  },  
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "clear": "rimraf ./lib",
+    "test": "echo please write test!"
+  },
   "tsup": {
-    "entry": ["./index.ts"],
+    "entry": [
+      "./index.ts"
+    ],
     "outDir": "lib",
     "splitting": false,
     "sourcemap": false,
@@ -23,5 +25,8 @@
   ],
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@react-pdf-wasm/types": "workspace:*"
+  }
 }

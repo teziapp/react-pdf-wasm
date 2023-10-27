@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      render:
+        specifier: ^0.1.4
+        version: 0.1.4
     devDependencies:
       rimraf:
         specifier: ^5.0.5
@@ -18,7 +22,13 @@ importers:
         specifier: latest
         version: 1.10.16
 
-  packages/render: {}
+  packages/render:
+    devDependencies:
+      '@react-pdf-wasm/types':
+        specifier: workspace:*
+        version: link:../types
+
+  packages/types: {}
 
   packages/wasm-pdf:
     devDependencies:
@@ -1085,6 +1095,10 @@ packages:
     resolution: {integrity: sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==}
     engines: {node: '>= 6'}
     dev: true
+
+  /curry@0.0.4:
+    resolution: {integrity: sha512-IPapCjuLQfb9u7HEU+l7XX10CmK5ojdvjt+0sNrZmSvSU31OZxPV78cmDj1Zm+ZX/tEh7jeYdaD4v89iJDOD0g==}
+    dev: false
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -2459,6 +2473,12 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
+  /render@0.1.4:
+    resolution: {integrity: sha512-mTNCTWXyulJhMFcsCZGwMjE3GjH40eE4r23Or7Sw4XnEBHO8gS5ZBHgxDGjFF1v0pe9GXx+c+8njbpry+11e3A==}
+    dependencies:
+      traverser: 0.0.5
+    dev: false
+
   /renderkid@3.0.0:
     resolution: {integrity: sha512-q/7VIQA8lmM1hF+jn+sFSPWGlMkSAeNYcPLmDQx2zzuiDfaLrOmumR8iaUKlenFgh0XRPIUeSPlH3A+AW3Z5pg==}
     dependencies:
@@ -2925,6 +2945,12 @@ packages:
     dependencies:
       punycode: 2.3.0
     dev: true
+
+  /traverser@0.0.5:
+    resolution: {integrity: sha512-8wq1H/gNr1PwGhmflklBTvZlY3aOgUmurSYD8PueKn1Btq01REtupQ8nY7VpcG4v2YPKBODxYKIdTt36W+Scwg==}
+    dependencies:
+      curry: 0.0.4
+    dev: false
 
   /tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
