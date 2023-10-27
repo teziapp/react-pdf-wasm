@@ -21,7 +21,8 @@
     "clean": true
   },
   "files": [
-    "lib"
+    "lib",
+    "index.d.ts"
   ],
   "keywords": [],
   "author": "",
